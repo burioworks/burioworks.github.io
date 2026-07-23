@@ -12,6 +12,8 @@
 .
 ├─ index.html
 ├─ styles.css
+├─ favicon.ico
+├─ favicon.png
 ├─ app-ads.txt
 ├─ README.md
 └─ banso-legal/
