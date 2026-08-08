@@ -17,9 +17,15 @@ The GitHub Pages site for `burioworks`, an independent software studio creating 
 ├── app-ads.txt
 ├── README.md
 ├── assets/
-│   └── brand/
-│       ├── burioworks-mark-vector.svg
-│       └── burioworks-horizontal-lockup-vector.svg
+│   ├── brand/
+│   │   ├── burioworks-mark-vector.svg
+│   │   └── burioworks-horizontal-lockup-vector.svg
+│   └── products/
+│       ├── banso/
+│       │   └── banso-archive.webp
+│       └── roblox/
+│           ├── scrap-world.webp
+│           └── neko-shelter.webp
 ├── finallook/
 │   ├── index.html
 │   ├── privacy-policy.html
@@ -46,6 +52,8 @@ Settings
 ```
 
 Product-specific images, destination URLs, and document content are intentionally isolated and replaceable. Search for `TODO:` in the HTML to find pending content without changing the page layouts.
+
+Only optimized production images referenced by the published pages belong in `assets/products/`. Original working images and unused exports stay outside the public repository.
 
 The public repository keeps only the production brand assets used by the site:
 

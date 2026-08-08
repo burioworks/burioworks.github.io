@@ -29,7 +29,6 @@ html {
 }
 
 body {
-  min-width: 20rem;
   margin: 0;
   color: var(--ink);
   background: var(--background);
@@ -329,6 +328,11 @@ h3 {
 }
 
 .product-visual--roblox {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem;
   color: #285269;
   background: #e7f3f5;
 }
@@ -336,6 +340,30 @@ h3 {
 .product-visual--banso {
   color: #463f36;
   background: #f3f0eb;
+}
+
+.product-visual--roblox::before,
+.product-visual--roblox::after,
+.product-visual--banso::before,
+.product-visual--banso::after {
+  display: none;
+}
+
+.product-visual--roblox img,
+.product-visual--banso img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.45rem;
+}
+
+.product-visual--roblox img {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.product-visual--banso img {
+  object-fit: contain;
 }
 
 .visual-monogram {
@@ -433,6 +461,48 @@ h3 {
   color: var(--bw-deep-teal);
 }
 
+.project-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: auto;
+  border-top: 1px solid var(--soft-border);
+}
+
+.project-links a {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+  padding: 0.45rem 0.25rem;
+  color: var(--ink);
+  font-size: 0.76rem;
+  font-weight: 740;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.project-links a:first-child {
+  padding-right: 0.55rem;
+  border-right: 1px solid var(--soft-border);
+}
+
+.project-links a:nth-child(2) {
+  padding-left: 0.55rem;
+}
+
+.project-links a:hover {
+  color: var(--bw-deep-teal);
+}
+
+.project-links .project-links__secondary {
+  grid-column: 1 / -1;
+  padding-inline: 0.25rem;
+  border-top: 1px solid var(--soft-border);
+  color: var(--muted);
+  font-weight: 650;
+}
+
 .availability {
   color: #7b8795;
   font-weight: 600;
@@ -500,15 +570,31 @@ h3 {
   border: 1px solid var(--soft-border);
   border-radius: var(--radius-sm);
   background: #fcfdfc;
+  text-decoration: none;
 }
 
 .elsewhere-item strong {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
   line-height: 1.35;
 }
 
 .elsewhere-item span {
   color: var(--muted);
   font-size: 0.82rem;
+}
+
+.elsewhere-item .external-indicator {
+  color: var(--bw-deep-teal);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.elsewhere-item:hover {
+  border-color: rgba(15, 118, 110, 0.35);
+  background: var(--bw-light-teal);
 }
 
 .elsewhere-item small {
