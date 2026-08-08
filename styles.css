@@ -248,7 +248,8 @@ h3 {
 .section-heading h2,
 .info-section h2 {
   margin-bottom: 0;
-  font-size: clamp(1.8rem, 3vw, 2.45rem);
+  font-size: clamp(1.65rem, 2.7vw, 2.2rem);
+  font-weight: 690;
 }
 
 .project-grid {
@@ -258,7 +259,7 @@ h3 {
 }
 
 .page--home #projects {
-  padding-block: 2rem 2.5rem;
+  padding-block: 2rem clamp(3rem, 5vw, 4rem);
 }
 
 .project-card {
@@ -279,14 +280,13 @@ h3 {
 .product-visual {
   position: relative;
   display: flex;
-  min-height: 8.25rem;
+  width: 100%;
+  aspect-ratio: 2 / 1;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 0.5rem;
-  margin: 0.5rem 0.5rem 0;
   overflow: hidden;
-  border-radius: 0.75rem;
   color: rgba(19, 34, 58, 0.66);
   font-size: 0.72rem;
   font-weight: 700;
@@ -330,9 +330,9 @@ h3 {
 .product-visual--roblox {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 100%;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.35rem;
+  gap: 0.2rem;
   color: #285269;
   background: #e7f3f5;
 }
@@ -353,8 +353,7 @@ h3 {
 .product-visual--banso img {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: 0.45rem;
+  height: 100%;
 }
 
 .product-visual--roblox img {
@@ -393,7 +392,7 @@ h3 {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 0.9rem;
+  padding: 1.05rem 1rem 1.1rem;
 }
 
 .project-meta {
@@ -430,19 +429,18 @@ h3 {
 }
 
 .project-card h3 {
-  margin: 0.75rem 0 0.45rem;
+  margin: 0.85rem 0 0.55rem;
   font-size: 1.25rem;
 }
 
 .project-card p {
-  margin: 0 0 1rem;
+  margin: 0 0 1.15rem;
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.55;
 }
 
-.text-link,
-.availability {
+.text-link {
   margin-top: auto;
   font-size: 0.88rem;
   font-weight: 760;
@@ -452,7 +450,8 @@ h3 {
   display: flex;
   min-height: 2.75rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 0.4rem;
   color: var(--ink);
   text-decoration: none;
 }
@@ -472,12 +471,12 @@ h3 {
   display: flex;
   min-height: 2.75rem;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.35rem;
+  justify-content: flex-start;
+  gap: 0.32rem;
   padding: 0.45rem 0.25rem;
   color: var(--ink);
   font-size: 0.76rem;
-  font-weight: 740;
+  font-weight: 650;
   line-height: 1.25;
   text-decoration: none;
 }
@@ -495,17 +494,24 @@ h3 {
   color: var(--bw-deep-teal);
 }
 
-.project-links .project-links__secondary {
+.project-links .project-links__primary {
   grid-column: 1 / -1;
   padding-inline: 0.25rem;
   border-top: 1px solid var(--soft-border);
-  color: var(--muted);
-  font-weight: 650;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 760;
 }
 
-.availability {
-  color: #7b8795;
-  font-weight: 600;
+.external-link-icon {
+  width: 0.82rem;
+  height: 0.82rem;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .info-grid {
@@ -516,7 +522,7 @@ h3 {
 
 .info-section {
   min-width: 0;
-  padding: clamp(1.1rem, 2vw, 1.5rem);
+  padding: clamp(1.3rem, 2.2vw, 1.75rem);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   border-left: 1px solid var(--border);
@@ -535,8 +541,8 @@ h3 {
 .about-layout {
   display: grid;
   grid-template-columns: 3.25rem 1fr;
-  gap: 1.25rem;
-  margin-top: 1rem;
+  gap: 1.35rem;
+  margin-top: 1.15rem;
 }
 
 .about-mark {
@@ -559,7 +565,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.65rem;
-  margin-top: 1rem;
+  margin-top: 1.15rem;
 }
 
 .elsewhere-item {
@@ -576,20 +582,14 @@ h3 {
 .elsewhere-item strong {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
+  justify-content: flex-start;
+  gap: 0.4rem;
   line-height: 1.35;
 }
 
 .elsewhere-item span {
   color: var(--muted);
   font-size: 0.82rem;
-}
-
-.elsewhere-item .external-indicator {
-  color: var(--bw-deep-teal);
-  font-size: 1rem;
-  line-height: 1;
 }
 
 .elsewhere-item:hover {
@@ -605,7 +605,7 @@ h3 {
 }
 
 .contact-section > p:not(.eyebrow) {
-  margin-top: 1rem;
+  margin-top: 1.15rem;
 }
 
 .contact-section .button {
@@ -1129,10 +1129,6 @@ h3 {
 
   .project-grid {
     grid-template-columns: 1fr;
-  }
-
-  .product-visual {
-    min-height: 11rem;
   }
 
   .elsewhere-list {
