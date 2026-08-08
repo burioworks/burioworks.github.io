@@ -16,6 +16,15 @@
 ├─ favicon.png
 ├─ app-ads.txt
 ├─ README.md
+├─ assets/
+│  └─ brand/
+│     └─ burioworks/
+│        ├─ docs/
+│        ├─ icons/
+│        ├─ logo/
+│        ├─ reference/
+│        ├─ web/
+│        └─ README.md
 └─ banso-legal/
    ├─ index.html
    ├─ privacy-policy.html
@@ -25,6 +34,10 @@
       └─ css/
          └─ style.css
 ```
+
+## ブランドアセット
+
+Burioworksの承認済みブランドキットは`assets/brand/burioworks/`で管理します。Webページから使用する場合は、`/assets/brand/burioworks/`から始まるルート相対URLで参照します。ブランドの使用規則と原本ファイルは、同ディレクトリ内の`README.md`を参照してください。
 
 `app-ads.txt`は、AdMobがBurioworksのアプリ広告販売者情報を確認するためのファイルです。更新時はAdMob管理画面に表示される正式な1行だけを使用し、ダミー値、説明、コメントは追加しません。
 

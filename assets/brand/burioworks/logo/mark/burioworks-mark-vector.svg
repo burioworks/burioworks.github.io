@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151 223" width="151" height="223">
+<defs><clipPath id="mark-clip">
+<path d="M 0 0 L 95 8 L 144 54 L 144 88 L 117 114 L 150 148 L 150 182 L 98 222 L 0 222 Z"/>
+</clipPath></defs>
+<g clip-path="url(#mark-clip)">
+<path d="M 0 0 L 95 8 L 144 54 L 100 59 L 49 42 Z" fill="#A7E6E2"/>
+<path d="M 0 0 L 49 42 L 49 112 L 0 222 Z" fill="#14B8A6"/>
+<path d="M 0 222 L 49 112 L 49 186 L 98 222 Z" fill="#0F766E"/>
+<path d="M 100 59 L 144 54 L 144 88 L 117 114 L 100 92 Z" fill="#2DD4BF"/>
+<path d="M 49 110 L 100 92 L 117 114 L 100 130 L 49 112 Z" fill="#2BC2B7"/>
+<path d="M 100 130 L 117 114 L 150 148 L 101 165 Z" fill="#138A84"/>
+<path d="M 49 186 L 100 130 L 101 165 L 150 148 L 150 182 L 98 222 Z" fill="#2BC2B7"/>
+<path d="M 49 42 L 100 59 L 100 92 L 49 110 Z" fill="#FFFFFF"/>
+<path d="M 49 112 L 100 130 L 101 165 L 49 186 Z" fill="#FFFFFF"/>
+</g>
+</svg>
