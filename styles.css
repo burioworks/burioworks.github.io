@@ -711,6 +711,15 @@ h3 {
   --product-accent-surface: #faf9ff;
 }
 
+/* Yoin product color is provisional and intentionally centralized. */
+.page--yoin {
+  --product-accent: #175b43;
+  --product-accent-soft: #eaf6ef;
+  --product-accent-border: #b9dac8;
+  --product-accent-muted: #45685a;
+  --product-accent-surface: #f7fbf9;
+}
+
 .product-header .header-inner {
   min-height: 5.75rem;
 }
@@ -735,12 +744,14 @@ h3 {
   color: var(--product-accent);
 }
 
+.product-hero,
 .finallook-hero {
   padding-block: clamp(3.5rem, 6.5vw, 5.75rem);
   border-bottom: 1px solid var(--border);
   background: #fff;
 }
 
+.product-hero__grid,
 .finallook-hero__grid {
   display: grid;
   grid-template-columns: minmax(0, 0.46fr) minmax(0, 0.54fr);
@@ -756,6 +767,28 @@ h3 {
   font-weight: 780;
 }
 
+.product-label--with-status {
+  flex-wrap: wrap;
+}
+
+.product-development-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.75rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  color: var(--product-accent);
+  background: var(--product-accent-soft);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.page--yoin .product-hero h1 {
+  max-width: 20ch;
+}
+
 .finallook-mark {
   display: grid;
   width: 2.6rem;
@@ -769,12 +802,14 @@ h3 {
   line-height: 1;
 }
 
+.product-hero h1,
 .finallook-hero h1 {
   max-width: 22ch;
   margin-bottom: 1.4rem;
   font-size: clamp(2.4rem, 4vw, 3.15rem);
 }
 
+.product-hero__body,
 .finallook-hero__body {
   max-width: 35rem;
   margin: 0 0 1.75rem;
@@ -803,6 +838,7 @@ h3 {
   font-weight: 730;
 }
 
+.product-visual-panel,
 .finallook-visual {
   position: relative;
   display: grid;
@@ -816,12 +852,15 @@ h3 {
     var(--product-accent-soft);
 }
 
+.product-visual-panel > img,
 .finallook-visual > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
+.product-visual-panel::before,
+.product-visual-panel::after,
 .finallook-visual::before,
 .finallook-visual::after {
   position: absolute;
@@ -830,6 +869,7 @@ h3 {
   content: "";
 }
 
+.product-visual-panel::before,
 .finallook-visual::before {
   width: 18rem;
   height: 18rem;
@@ -837,6 +877,7 @@ h3 {
   right: -6rem;
 }
 
+.product-visual-panel::after,
 .finallook-visual::after {
   width: 13rem;
   height: 13rem;
@@ -871,6 +912,19 @@ h3 {
   margin-top: 0.4rem;
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+.page--yoin .product-visual-panel {
+  background: var(--surface);
+}
+
+.visual-placeholder__inner .yoin-preview-word {
+  margin: 0 0 0.85rem;
+  color: var(--product-accent);
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
 }
 
 .checks-section {
@@ -975,6 +1029,11 @@ h3 {
 .document-nav__inner {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.document-nav__inner--single {
+  max-width: 32rem;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .document-nav a,
@@ -1227,6 +1286,7 @@ h3 {
     width: auto;
   }
 
+  .product-hero__grid,
   .finallook-hero__grid {
     grid-template-columns: minmax(0, 0.92fr) minmax(22rem, 1.08fr);
     gap: 2.5rem;
@@ -1275,6 +1335,7 @@ h3 {
   }
 
   .hero-grid,
+  .product-hero__grid,
   .finallook-hero__grid {
     grid-template-columns: 1fr;
   }
@@ -1310,6 +1371,7 @@ h3 {
     border-radius: 0 0 var(--radius-md) var(--radius-md);
   }
 
+  .product-visual-panel,
   .finallook-visual {
     min-height: 21rem;
   }
@@ -1411,6 +1473,7 @@ h3 {
   }
 
   .hero h1,
+  .product-hero h1,
   .finallook-hero h1 {
     font-size: 2.25rem;
   }

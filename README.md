@@ -34,13 +34,14 @@ The GitHub Pages site for `burioworks`, an independent software studio creating 
 │   ├── terms-of-service.html
 │   └── support.html
 ├── yoin/
+│   ├── index.html
 │   └── privacy/
 │       └── index.html
 └── banso-legal/
     └── existing Banso legal pages and assets
 ```
 
-The Japanese-primary Home at `/` and English Home at `/en/` share the same structure and stylesheet, with explicit language links between them. FinalLook has a Japanese-primary product page plus product-specific Privacy Policy, Terms of Service, and Support routes. Yoin has a published Privacy Policy at `/yoin/privacy/`.
+The Japanese-primary Home at `/` and English Home at `/en/` share the same structure and stylesheet, with explicit language links between them. FinalLook has a Japanese-primary product page plus product-specific Privacy Policy, Terms of Service, and Support routes. Yoin has a Japanese-primary product page at `/yoin/` and a published Privacy Policy at `/yoin/privacy/`.
 
 ## Development model
 
