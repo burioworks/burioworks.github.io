@@ -789,6 +789,10 @@ h3 {
   max-width: 20ch;
 }
 
+.yoin-headline-second-line {
+  display: block;
+}
+
 .finallook-mark {
   display: grid;
   width: 2.6rem;
@@ -1323,6 +1327,10 @@ h3 {
     position: absolute;
     top: 0.85rem;
     right: 0;
+  }
+
+  .yoin-headline-second-line {
+    display: inline;
   }
 
   .site-nav a {
