@@ -23,9 +23,12 @@ The GitHub Pages site for `burioworks`, an independent software studio creating 
 │   └── products/
 │       ├── banso/
 │       │   └── banso-archive.webp
-│       └── roblox/
+│       ├── roblox/
 │           ├── scrap-world.webp
 │           └── neko-shelter.webp
+│       └── yoin/
+│           ├── yoin_feature_graphic_1024x500.png
+│           └── yoin_icon_full_512.png
 ├── en/
 │   └── index.html
 ├── finallook/

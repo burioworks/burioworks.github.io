@@ -381,16 +381,23 @@ h3 {
 
 .product-visual--roblox::before,
 .product-visual--roblox::after,
+.product-visual--yoin::before,
+.product-visual--yoin::after,
 .product-visual--banso::before,
 .product-visual--banso::after {
   display: none;
 }
 
+.product-visual--yoin img,
 .product-visual--roblox img,
 .product-visual--banso img {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.product-visual--yoin img {
+  object-fit: cover;
 }
 
 .product-visual--roblox img {
@@ -769,6 +776,14 @@ h3 {
 
 .product-label--with-status {
   flex-wrap: wrap;
+}
+
+.yoin-app-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  flex: 0 0 auto;
+  border-radius: 0.7rem;
+  object-fit: cover;
 }
 
 .product-development-status {
