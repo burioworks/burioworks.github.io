@@ -1158,10 +1158,6 @@ h3 {
   background: var(--surface);
 }
 
-.page--yoin-privacy .back-link {
-  color: var(--yoin-accent);
-}
-
 .legal-main {
   width: min(calc(100% - (var(--content-padding) * 2)), 48rem);
   min-height: 70vh;
@@ -1189,7 +1185,7 @@ h3 {
 .legal-main h1 {
   max-width: 19ch;
   margin-bottom: 1rem;
-  font-size: clamp(2.15rem, 5.5vw, 3.6rem);
+  font-size: clamp(2.15rem, 3.7vw, 2.9rem);
   font-weight: 740;
   line-height: 1.2;
 }
