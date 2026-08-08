@@ -31,11 +31,14 @@ The GitHub Pages site for `burioworks`, an independent software studio creating 
 │   ├── privacy-policy.html
 │   ├── terms-of-service.html
 │   └── support.html
+├── yoin/
+│   └── privacy/
+│       └── index.html
 └── banso-legal/
     └── existing Banso legal pages and assets
 ```
 
-The Home page is a single-page studio overview. FinalLook has a short product page plus product-specific Privacy Policy, Terms of Service, and Support routes.
+The Home page is a single-page studio overview. FinalLook has a short product page plus product-specific Privacy Policy, Terms of Service, and Support routes. Yoin has a published Privacy Policy at `/yoin/privacy/`.
 
 ## Development model
 
