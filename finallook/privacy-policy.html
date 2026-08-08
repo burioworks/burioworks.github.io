@@ -12,28 +12,38 @@
   <body class="page page--finallook-document">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <header class="site-header product-header">
+    <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="/" aria-label="burioworks home">
           <img src="/assets/brand/burioworks-horizontal-lockup-vector.svg" alt="burioworks" width="204" height="57">
         </a>
-        <a class="back-link" href="/finallook/"><span aria-hidden="true">←</span> Back to FinalLook</a>
+        <div class="header-actions">
+          <nav class="site-nav" aria-label="Main navigation">
+            <a href="/#projects">Projects</a>
+            <a href="/#about">About</a>
+            <a href="/#elsewhere">Elsewhere</a>
+            <a href="/#contact">Contact</a>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="document-main" id="main-content">
-      <div class="document-product">
-        <div class="product-label"><span class="finallook-mark" aria-hidden="true">F</span><span>FinalLook</span></div>
-      </div>
-      <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: Pending approved content</p>
-      <hr class="document-rule">
+    <main class="legal-main" id="main-content">
+      <article class="legal-document" aria-labelledby="privacy-title">
+        <header class="legal-document__header">
+          <p class="legal-product">FinalLook</p>
+          <h1 id="privacy-title">Privacy Policy</h1>
+          <p class="legal-date last-updated">Last updated: Pending approved content</p>
+        </header>
 
-      <!-- TODO: insert approved FinalLook Privacy Policy -->
-      <section class="document-placeholder" aria-labelledby="privacy-placeholder-title">
-        <h2 id="privacy-placeholder-title">Content pending</h2>
-        <p>Approved Privacy Policy content will be inserted here.</p>
-      </section>
+        <!-- TODO: insert approved FinalLook Privacy Policy -->
+        <section class="legal-section document-placeholder" aria-labelledby="privacy-placeholder-title">
+          <h2 id="privacy-placeholder-title">Content pending</h2>
+          <p>Approved Privacy Policy content will be inserted here.</p>
+        </section>
+
+        <a class="legal-back-link" href="/finallook/"><span aria-hidden="true">←</span> Back to FinalLook</a>
+      </article>
     </main>
 
     <nav class="document-nav" aria-label="FinalLook documents">
