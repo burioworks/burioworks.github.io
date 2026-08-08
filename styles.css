@@ -355,7 +355,7 @@ h3 {
 .product-visual--roblox img {
   position: absolute;
   inset: 0;
-  object-fit: contain;
+  object-fit: cover;
   opacity: 0;
   animation: roblox-thumbnail-cycle 8s ease-in-out infinite;
   will-change: opacity;
