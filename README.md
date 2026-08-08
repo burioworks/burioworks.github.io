@@ -26,6 +26,8 @@ The GitHub Pages site for `burioworks`, an independent software studio creating 
 │       └── roblox/
 │           ├── scrap-world.webp
 │           └── neko-shelter.webp
+├── en/
+│   └── index.html
 ├── finallook/
 │   ├── index.html
 │   ├── privacy-policy.html
@@ -38,7 +40,7 @@ The GitHub Pages site for `burioworks`, an independent software studio creating 
     └── existing Banso legal pages and assets
 ```
 
-The Home page is a single-page studio overview. FinalLook has a short product page plus product-specific Privacy Policy, Terms of Service, and Support routes. Yoin has a published Privacy Policy at `/yoin/privacy/`.
+The Japanese-primary Home at `/` and English Home at `/en/` share the same structure and stylesheet, with explicit language links between them. FinalLook has a Japanese-primary product page plus product-specific Privacy Policy, Terms of Service, and Support routes. Yoin has a published Privacy Policy at `/yoin/privacy/`.
 
 ## Development model
 

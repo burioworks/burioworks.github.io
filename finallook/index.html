@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,30 +14,37 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body class="page page--finallook">
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">本文へスキップ</a>
 
-    <header class="site-header product-header">
+    <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="/" aria-label="burioworks home">
+        <a class="brand" href="/" aria-label="burioworks ホーム">
           <img src="/assets/brand/burioworks-horizontal-lockup-vector.svg" alt="burioworks" width="204" height="57">
         </a>
-        <a class="back-link" href="/#projects"><span aria-hidden="true">←</span> Back to Projects</a>
+        <div class="header-actions">
+          <nav class="site-nav" aria-label="メインナビゲーション">
+            <a href="/#projects">Projects</a>
+            <a href="/#about">About</a>
+            <a href="/#elsewhere">Elsewhere</a>
+            <a href="/#contact">Contact</a>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main id="main-content">
       <section class="finallook-hero" aria-labelledby="finallook-title">
         <div class="container finallook-hero__grid">
-          <div>
+          <div class="finallook-hero__copy">
             <div class="product-label">
               <!-- TODO: replace provisional letter mark with approved FinalLook app icon -->
               <span class="finallook-mark" aria-hidden="true">F</span>
               <span>FinalLook <span class="product-type">Canva App</span></span>
             </div>
             <h1 id="finallook-title">Find possible differences before you publish.</h1>
-            <p class="finallook-hero__body">Review prices, dates, times, and visible URLs across your Canva design before publishing.</p>
+            <p class="finallook-hero__body">Canvaデザイン全体から、価格・日付・時刻・表示URLの気になる違いを公開前に確認できます。</p>
             <!-- TODO: add the approved Open in Canva production URL -->
-            <span class="pending-cta" aria-disabled="true" aria-label="Open in Canva URL pending">Open in Canva <small>URL pending</small></span>
+            <span class="pending-cta" aria-disabled="true">Open in Canva <span class="sr-only">（公開URL準備中）</span></span>
           </div>
 
           <!-- TODO: replace with approved actual FinalLook UI screenshot -->
@@ -53,48 +60,48 @@
 
       <section class="checks-section" aria-labelledby="checks-title">
         <div class="container">
-          <h2 id="checks-title">What FinalLook checks</h2>
+          <h2 id="checks-title">FinalLookが確認するもの</h2>
           <div class="check-grid">
             <article class="check-item">
-              <span class="check-icon" aria-hidden="true">$</span>
-              <h3>Prices</h3>
+              <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4Z"/><circle cx="7.5" cy="6.5" r="1"/></svg>
+              <h3>価格</h3>
             </article>
             <article class="check-item">
-              <span class="check-icon" aria-hidden="true">31</span>
-              <h3>Dates</h3>
+              <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 2v4m8-4v4M3 10h18"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg>
+              <h3>日付</h3>
             </article>
             <article class="check-item">
-              <span class="check-icon" aria-hidden="true">12:00</span>
-              <h3>Times</h3>
+              <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <h3>時刻</h3>
             </article>
             <article class="check-item">
-              <span class="check-icon" aria-hidden="true">↗</span>
-              <h3>Visible URLs</h3>
+              <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m10 13-1.5 1.5a4 4 0 0 1-5.7-5.7l3-3a4 4 0 0 1 5.7 0M14 11l1.5-1.5a4 4 0 0 1 5.7 5.7l-3 3a4 4 0 0 1-5.7 0M8 16l8-8"/></svg>
+              <h3>表示URL</h3>
             </article>
           </div>
 
           <aside class="readonly-callout" aria-labelledby="readonly-title">
-            <span class="readonly-icon" aria-hidden="true">▣</span>
+            <span class="readonly-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
             <div>
               <h2 id="readonly-title">Read-only by design</h2>
-              <p>FinalLook analyzes and reports. It doesn't change your design.</p>
+              <p>FinalLookはデザインを分析して結果を表示するだけで、デザインそのものは変更しません。</p>
             </div>
           </aside>
         </div>
       </section>
 
-      <nav class="document-nav" aria-label="FinalLook documents">
+      <nav class="document-nav" aria-label="FinalLook ドキュメント">
         <div class="container document-nav__inner">
-          <a href="/finallook/privacy-policy.html">Privacy Policy</a>
-          <a href="/finallook/terms-of-service.html">Terms of Service</a>
-          <a href="/finallook/support.html">Support</a>
+          <a href="/finallook/privacy-policy.html">プライバシーポリシー</a>
+          <a href="/finallook/terms-of-service.html">利用規約</a>
+          <a href="/finallook/support.html">サポート</a>
         </div>
       </nav>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <a class="brand brand--footer" href="/" aria-label="burioworks home">
+        <a class="brand brand--footer" href="/" aria-label="burioworks ホーム">
           <img src="/assets/brand/burioworks-horizontal-lockup-vector.svg" alt="burioworks" width="170" height="47">
         </a>
         <small>© 2026 burioworks</small>
