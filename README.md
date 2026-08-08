@@ -18,12 +18,8 @@ The GitHub Pages site for `burioworks`, an independent software studio creating 
 ├── README.md
 ├── assets/
 │   └── brand/
-│       └── burioworks/
-│           ├── logo/
-│           ├── icons/
-│           ├── web/
-│           ├── reference/
-│           └── docs/
+│       ├── burioworks-mark-vector.svg
+│       └── burioworks-horizontal-lockup-vector.svg
 ├── finallook/
 │   ├── index.html
 │   ├── privacy-policy.html
@@ -51,7 +47,14 @@ Settings
 
 Product-specific images, destination URLs, and document content are intentionally isolated and replaceable. Search for `TODO:` in the HTML to find pending content without changing the page layouts.
 
-The site uses the approved path-based mark and horizontal lockup from `assets/brand/burioworks/logo/`. Do not redraw or transform the brand geometry.
+The public repository keeps only the production brand assets used by the site:
+
+- `assets/brand/burioworks-mark-vector.svg`
+- `assets/brand/burioworks-horizontal-lockup-vector.svg`
+- `favicon.ico`
+- `favicon.png`
+
+The SVG files are the approved path-based mark and horizontal lockup. Do not redraw or transform their geometry. Brand source material, references, documentation, alternate exports, and unused variants are intentionally excluded from the public repository.
 
 ## Production files that must be preserved
 
