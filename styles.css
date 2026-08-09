@@ -943,6 +943,16 @@ h3 {
   background: var(--surface);
 }
 
+.yoin-visual::before,
+.yoin-visual::after {
+  display: none;
+}
+
+.yoin-visual > img {
+  object-fit: cover;
+  object-position: center;
+}
+
 .visual-placeholder__inner .yoin-preview-word {
   margin: 0 0 0.85rem;
   color: var(--product-accent);
