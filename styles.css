@@ -1181,11 +1181,13 @@ h3 {
 }
 
 .legal-section p + p,
-.legal-section ul + p {
+.legal-section ul + p,
+.legal-section ol + p {
   margin-top: 1rem;
 }
 
-.legal-section ul {
+.legal-section ul,
+.legal-section ol {
   margin: 1rem 0 0;
   padding-left: 1.5rem;
 }
