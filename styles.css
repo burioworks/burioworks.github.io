@@ -945,10 +945,14 @@ h3 {
 
 .yoin-visual::before,
 .yoin-visual::after {
-  display: none;
+  content: none;
 }
 
 .yoin-visual > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
