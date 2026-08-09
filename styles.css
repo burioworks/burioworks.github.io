@@ -884,8 +884,6 @@ h3 {
   object-fit: contain;
 }
 
-.product-visual-panel::before,
-.product-visual-panel::after,
 .finallook-visual::before,
 .finallook-visual::after {
   position: absolute;
@@ -894,7 +892,6 @@ h3 {
   content: "";
 }
 
-.product-visual-panel::before,
 .finallook-visual::before {
   width: 18rem;
   height: 18rem;
@@ -902,7 +899,6 @@ h3 {
   right: -6rem;
 }
 
-.product-visual-panel::after,
 .finallook-visual::after {
   width: 13rem;
   height: 13rem;
@@ -940,17 +936,15 @@ h3 {
 }
 
 .page--yoin .product-visual-panel {
+  display: block;
   background: var(--surface);
-}
-
-.yoin-visual::before,
-.yoin-visual::after {
-  content: none;
 }
 
 .yoin-visual > img {
   position: absolute;
   inset: 0;
+  display: block;
+  max-width: none;
   width: 100%;
   height: 100%;
   object-fit: cover;
