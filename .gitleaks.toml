@@ -1,0 +1,4 @@
+title = "burioworks.github.io Gitleaks configuration"
+
+[extend]
+useDefault = true
