@@ -2,18 +2,22 @@
 
 The GitHub Pages site for `burioworks`, an independent software studio creating apps, tools, and games.
 
-- Public site: <https://burioworks.github.io/>
-- Banso legal pages: <https://burioworks.github.io/banso-legal/>
-- AdMob seller declaration: <https://burioworks.github.io/app-ads.txt>
+- Public site: <https://burioworks.com/>
+- Yoin Privacy Policy: <https://burioworks.com/yoin/privacy/>
+- Banso legal pages: <https://burioworks.com/banso-legal/>
+- AdMob seller declaration: <https://burioworks.com/app-ads.txt>
 
 ## Site structure
 
 ```text
 .
+├── CNAME
 ├── index.html
 ├── styles.css
 ├── favicon.ico
 ├── favicon.png
+├── robots.txt
+├── sitemap.xml
 ├── app-ads.txt
 ├── README.md
 ├── assets/
@@ -24,8 +28,8 @@ The GitHub Pages site for `burioworks`, an independent software studio creating 
 │       ├── banso/
 │       │   └── banso-archive.webp
 │       ├── roblox/
-│           ├── scrap-world.webp
-│           └── neko-shelter.webp
+│       │   ├── scrap-world.webp
+│       │   └── neko-shelter.webp
 │       └── yoin/
 │           ├── yoin-product-hero.png
 │           ├── yoin_feature_graphic_1024x500.png
@@ -45,13 +49,15 @@ The GitHub Pages site for `burioworks`, an independent software studio creating 
     └── existing Banso legal pages and assets
 ```
 
-The Japanese-primary Home at `/` and English Home at `/en/` share the same structure and stylesheet, with explicit language links between them. FinalLook has a Japanese-primary product page plus product-specific Privacy Policy, Terms of Service, and Support routes. Yoin has a Japanese-primary product page at `/yoin/` and a published Privacy Policy at `/yoin/privacy/`.
+The Japanese-primary Home at `/` and English Home at `/en/` share the same structure and stylesheet, with explicit language links between them. Yoin has a Japanese-primary product page at `/yoin/` and a published Privacy Policy at `/yoin/privacy/`.
+
+FinalLook remains visible as a project card but is intentionally not linked from Home while its public product assets and documents are incomplete. Its existing product and document routes carry `noindex,nofollow,noarchive` and are excluded from `sitemap.xml` until release-ready.
 
 ## Development model
 
 The site is static HTML and CSS with no build step, framework, CMS, backend, analytics, cookies, or JavaScript. Run any local static HTTP server from the repository root to preview route behavior.
 
-GitHub Pages continues to publish from `main / root`:
+GitHub Pages publishes from `main / root`:
 
 ```text
 Settings
@@ -80,6 +86,10 @@ The SVG files are the approved path-based mark and horizontal lockup. Do not red
 
 `app-ads.txt` contains the production AdMob seller declaration. Do not alter, reformat, or add comments to this file. Only the exact seller declaration from the AdMob management screen should be present.
 
-## Custom domain
+## Custom domain and SEO
 
-The custom-domain and DNS cutover are pending and intentionally separate from this site implementation. Do not add or modify `CNAME` until that work is approved.
+The canonical production origin is `https://burioworks.com/`. The branch publishing source keeps `CNAME` at the repository root with `burioworks.com`.
+
+Publicly indexable routes are listed in `sitemap.xml`. `robots.txt` points crawlers to that sitemap. Home language variants use canonical and hreflang metadata on the custom domain, and Yoin uses canonical/Open Graph metadata on the custom domain.
+
+After a custom-domain change, verify the domain under `Settings → Pages` and enable `Enforce HTTPS` once GitHub makes the option available.
