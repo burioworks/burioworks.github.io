@@ -58,7 +58,7 @@ The GitHub Pages site for `burioworks`, an independent software studio creating 
 
 The Japanese-primary Home at `/` and English Home at `/en/` share the same structure and stylesheet, with explicit language links between them. Yoin has a Japanese-primary product page at `/yoin/`, a published Japanese Privacy Policy at `/yoin/privacy/`, and its English translation at `/yoin/privacy/en/`.
 
-FinalLook remains visible as a project card but is intentionally not linked from Home while its public product assets and documents are incomplete. Japanese FinalLook routes live under `/finallook/`; their English equivalents mirror them under `/en/finallook/`. Each corresponding page has an explicit language link. All FinalLook product and document routes carry `noindex,nofollow,noarchive` and are excluded from `sitemap.xml` until release-ready.
+FinalLook is published as a project card and detail page in Japanese at `/finallook/` and English at `/en/finallook/`. Each corresponding page has an explicit language link. The two product pages are listed in `sitemap.xml`.
 
 ## Development model
 
