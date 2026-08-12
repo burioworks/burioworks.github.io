@@ -275,11 +275,15 @@ h3 {
 }
 
 .button--coming-soon {
+  appearance: none;
+  -webkit-appearance: none;
   border: 1px solid var(--product-accent-border);
   color: var(--product-accent-muted);
   background: var(--product-accent-surface);
+  box-shadow: none;
   cursor: not-allowed;
   font: inherit;
+  text-shadow: none;
 }
 
 .button--coming-soon:disabled {
@@ -772,7 +776,8 @@ h3 {
   min-height: 2.6rem;
 }
 
-.yoin-app-icon {
+.yoin-app-icon,
+.finallook-app-icon {
   width: 2.6rem;
   height: 2.6rem;
   flex: 0 0 auto;
