@@ -3,7 +3,7 @@
 The GitHub Pages site for `burioworks`, an independent software studio creating apps, tools, and games.
 
 - Public site: <https://burioworks.com/>
-- Yoin Privacy Policy: <https://burioworks.com/yoin/privacy/>
+- Yoin Privacy Policy: <https://burioworks.com/yoin/privacy/> (Japanese), <https://burioworks.com/yoin/privacy/en/> (English)
 - Banso legal pages: <https://burioworks.com/banso-legal/>
 - AdMob seller declaration: <https://burioworks.com/app-ads.txt>
 
@@ -49,12 +49,14 @@ The GitHub Pages site for `burioworks`, an independent software studio creating 
 ├── yoin/
 │   ├── index.html
 │   └── privacy/
-│       └── index.html
+│       ├── index.html
+│       └── en/
+│           └── index.html
 └── banso-legal/
     └── existing Banso legal pages and assets
 ```
 
-The Japanese-primary Home at `/` and English Home at `/en/` share the same structure and stylesheet, with explicit language links between them. Yoin has a Japanese-primary product page at `/yoin/` and a published Privacy Policy at `/yoin/privacy/`.
+The Japanese-primary Home at `/` and English Home at `/en/` share the same structure and stylesheet, with explicit language links between them. Yoin has a Japanese-primary product page at `/yoin/`, a published Japanese Privacy Policy at `/yoin/privacy/`, and its English translation at `/yoin/privacy/en/`.
 
 FinalLook remains visible as a project card but is intentionally not linked from Home while its public product assets and documents are incomplete. Japanese FinalLook routes live under `/finallook/`; their English equivalents mirror them under `/en/finallook/`. Each corresponding page has an explicit language link. All FinalLook product and document routes carry `noindex,nofollow,noarchive` and are excluded from `sitemap.xml` until release-ready.
 
