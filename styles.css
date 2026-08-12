@@ -1260,6 +1260,10 @@ h3 {
     min-height: 21rem;
   }
 
+  .finallook-visual {
+    min-height: 0;
+  }
+
   .check-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
