@@ -275,11 +275,15 @@ h3 {
 }
 
 .button--coming-soon {
+  appearance: none;
+  -webkit-appearance: none;
   border: 1px solid var(--product-accent-border);
   color: var(--product-accent-muted);
   background: var(--product-accent-surface);
+  box-shadow: none;
   cursor: not-allowed;
   font: inherit;
+  text-shadow: none;
 }
 
 .button--coming-soon:disabled {
@@ -475,13 +479,13 @@ h3 {
 }
 
 .status--coming-soon {
-  color: #28528b;
-  background: #e7f0fc;
+  color: #6d28d9;
+  background: #ede9fe;
 }
 
 .status--published {
-  color: #0c6a51;
-  background: #e4f8ef;
+  color: #065f46;
+  background: #d1fae5;
 }
 
 .status--archived {
@@ -772,7 +776,8 @@ h3 {
   min-height: 2.6rem;
 }
 
-.yoin-app-icon {
+.yoin-app-icon,
+.finallook-app-icon {
   width: 2.6rem;
   height: 2.6rem;
   flex: 0 0 auto;
@@ -841,33 +846,6 @@ h3 {
 
 .finallook-visual > img {
   object-fit: cover;
-}
-
-.finallook-visual::before,
-.finallook-visual::after {
-  position: absolute;
-  border-radius: 50%;
-  background: var(--product-accent-soft);
-  content: "";
-}
-
-.finallook-visual::before,
-.finallook-visual::after {
-  display: none;
-}
-
-.finallook-visual::before {
-  width: 18rem;
-  height: 18rem;
-  top: -9rem;
-  right: -6rem;
-}
-
-.finallook-visual::after {
-  width: 13rem;
-  height: 13rem;
-  bottom: -6rem;
-  left: -5rem;
 }
 
 .page--yoin .product-visual-panel {
