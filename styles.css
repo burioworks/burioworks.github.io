@@ -274,6 +274,18 @@ h3 {
   background: #0b625c;
 }
 
+.button--coming-soon {
+  border: 1px solid var(--product-accent-border);
+  color: var(--product-accent-muted);
+  background: var(--product-accent-surface);
+  cursor: not-allowed;
+  font: inherit;
+}
+
+.button--coming-soon:disabled {
+  opacity: 1;
+}
+
 .section-heading {
   display: flex;
   align-items: end;
@@ -756,10 +768,6 @@ h3 {
   font-weight: 780;
 }
 
-.product-label--with-status {
-  flex-wrap: wrap;
-}
-
 .product-label--finallook {
   min-height: 2.6rem;
 }
@@ -770,20 +778,6 @@ h3 {
   flex: 0 0 auto;
   border-radius: 0.7rem;
   object-fit: cover;
-}
-
-.product-development-status {
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.75rem;
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
-  color: var(--product-accent);
-  background: var(--product-accent-soft);
-  font-size: 0.72rem;
-  font-weight: 750;
-  letter-spacing: 0.02em;
-  line-height: 1.2;
 }
 
 .page--yoin .product-hero h1 {
@@ -815,19 +809,6 @@ h3 {
   color: var(--product-accent);
   font-size: 1.2rem;
   font-weight: 760;
-}
-
-.pending-cta {
-  display: inline-flex;
-  min-height: 3.4rem;
-  align-items: center;
-  gap: 0.8rem;
-  padding: 0.75rem 1.15rem;
-  border: 1px dashed var(--product-accent-border);
-  border-radius: 0.75rem;
-  color: var(--product-accent-muted);
-  background: var(--product-accent-surface);
-  font-weight: 730;
 }
 
 .product-visual-panel,
