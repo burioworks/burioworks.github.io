@@ -843,33 +843,6 @@ h3 {
   object-fit: cover;
 }
 
-.finallook-visual::before,
-.finallook-visual::after {
-  position: absolute;
-  border-radius: 50%;
-  background: var(--product-accent-soft);
-  content: "";
-}
-
-.finallook-visual::before,
-.finallook-visual::after {
-  display: none;
-}
-
-.finallook-visual::before {
-  width: 18rem;
-  height: 18rem;
-  top: -9rem;
-  right: -6rem;
-}
-
-.finallook-visual::after {
-  width: 13rem;
-  height: 13rem;
-  bottom: -6rem;
-  left: -5rem;
-}
-
 .page--yoin .product-visual-panel {
   display: block;
   background: var(--surface);
@@ -1285,10 +1258,6 @@ h3 {
   .product-visual-panel,
   .finallook-visual {
     min-height: 21rem;
-  }
-
-  .finallook-visual {
-    min-height: 0;
   }
 
   .check-grid {
