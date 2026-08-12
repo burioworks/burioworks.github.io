@@ -475,13 +475,13 @@ h3 {
 }
 
 .status--coming-soon {
-  color: #28528b;
-  background: #e7f0fc;
+  color: #6d28d9;
+  background: #ede9fe;
 }
 
 .status--published {
-  color: #0c6a51;
-  background: #e4f8ef;
+  color: #065f46;
+  background: #d1fae5;
 }
 
 .status--archived {
