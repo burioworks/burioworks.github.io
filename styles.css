@@ -434,7 +434,7 @@ h3 {
 }
 
 .product-visual--banso img {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 @keyframes roblox-thumbnail-cycle {
