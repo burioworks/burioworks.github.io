@@ -525,6 +525,11 @@ h3 {
   color: var(--bw-deep-teal);
 }
 
+.text-link--disabled {
+  color: var(--muted);
+  font-weight: 650;
+}
+
 .project-links {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
