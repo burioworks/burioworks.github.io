@@ -94,10 +94,11 @@
             <li>The selected show after you choose a candidate</li>
             <li>Whether the entry is for immediately after the show or the next day</li>
             <li>Your afterglow position</li>
-            <li>An identifier needed for authentication and duplicate-submission prevention</li>
+            <li>An identifier used for Firebase anonymous authentication</li>
           </ul>
+          <p>Firebase / Google Cloud may also process technical information such as IP addresses, device and app information, and information used to verify the legitimacy of the app for authentication, security, and abuse prevention.</p>
           <p>Your afterglow position is used to combine results from the same show. After it is converted into the form needed for aggregation, Yoin does not keep it as an exact individual position. Your name, note, photos, and Personal MEMORY text are not sent.</p>
-          <p>Yoin temporarily keeps the identifier needed to prevent the same information from being counted twice for the same show. It is not used to build a history of your activity across different shows.</p>
+          <p>The identifier used for Firebase anonymous authentication is managed by Firebase for authentication. Separately, Yoin temporarily keeps an identifier used to prevent the same information from being counted twice for the same show. This is not used to build a history of your activity across different shows.</p>
           <p>Other users do not see individual submissions or identities; they see only the aggregated Shared Afterglow. However, when very few people participate in a show, it may still be possible to infer another user’s general afterglow tendency from information outside Yoin.</p>
         </section>
 
@@ -110,7 +111,7 @@
         <section class="legal-section" aria-labelledby="retention-deletion">
           <h2 id="retention-deletion">6. Data Retention and Deletion</h2>
           <p>Live show records stored on the device can be deleted by the user from the App. Users can also delete all Yoin data stored on the device through the Data Management feature.</p>
-          <p>Yoin does not keep an exact individual afterglow position on the server after it has been processed for Shared Afterglow. Identifiers created to prevent duplicate submissions are kept only as long as needed and are then deleted.</p>
+          <p>Yoin does not keep an exact individual afterglow position on the server after it has been processed for Shared Afterglow. Identifiers created by Yoin to prevent duplicate submissions are kept only as long as needed and are then deleted.</p>
           <p>Information sent to Shared Afterglow is reflected in the aggregate for that show. Deleting a Personal MEMORY or local app data does not individually remove or withdraw information that has already been included in that aggregate. Yoin currently does not provide an individual deletion or withdrawal function for accepted Shared Afterglow submissions. Show information and aggregate results are retained to provide Shared Afterglow.</p>
           <p>If the user stops sending usage data to Firebase Analytics, collection stops from that point onward.</p>
           <p>For usage data already sent to Firebase Analytics, deleting data in the App does not guarantee deletion from Google’s servers. Data in Firebase Analytics is handled in accordance with the retention period set by the Operator and Google’s policies.</p>
