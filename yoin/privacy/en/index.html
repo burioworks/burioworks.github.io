@@ -53,8 +53,8 @@
           <h2 id="basic-policy">1. Basic Policy</h2>
           <p>Yoin is an app for saving what you felt and your memories after a live show for yourself and looking back on them.</p>
           <p>Personal live show records that users save in Yoin, such as artist names, show information, short notes, records of what they felt, and photos, are generally stored on the user’s device.</p>
-          <p>Only when a user explicitly selects a show candidate for Shared Afterglow does the App send the minimum information needed to aggregate afterglow from the same show to the Firebase / Google Cloud infrastructure used by the Operator. The information sent and how it is handled are described in Section 4.</p>
-          <p>Yoin has no user-created account or login feature. However, Shared Afterglow uses Firebase Anonymous Authentication for authentication and duplicate-submission prevention.</p>
+          <p>When you use Shared Afterglow, Yoin sends only the information needed to combine your afterglow with results from the selected show to Firebase / Google Cloud. See Section 4 for details.</p>
+          <p>Yoin has no user-created account or login feature. Shared Afterglow uses Firebase anonymous authentication for authentication and duplicate-submission prevention.</p>
         </section>
 
         <section class="legal-section" aria-labelledby="local-data">
@@ -88,17 +88,16 @@
 
         <section class="legal-section" aria-labelledby="collective-afterglow">
           <h2 id="collective-afterglow">4. Information Handled for Shared Afterglow</h2>
-          <p>When a user explicitly selects a show candidate, the App sends the following information so that afterglow for the “immediate” or “next day” phase can be shown collectively with afterglow from other users who selected the same show.</p>
+          <p>When you select a show and use Shared Afterglow, Yoin sends the following information to Firebase / Google Cloud.</p>
           <ul>
-            <li>A reference to the selected shared show</li>
-            <li>Whether the submission is for the immediate or next-day phase</li>
-            <li>The afterglow position within Yoin’s in-app feeling space</li>
-            <li>Firebase anonymous authentication information needed for authentication and to prevent duplicate submissions to the same show and phase</li>
+            <li>The selected show</li>
+            <li>Whether the entry is for immediately after the show or the next day</li>
+            <li>Your afterglow position</li>
+            <li>An identifier needed for authentication and duplicate-submission prevention</li>
           </ul>
-          <p>The exact afterglow coordinates sent by the App are processed temporarily on the server to convert them into one cell of a 32×32 aggregate grid. The exact coordinates are not persisted in Cloud Firestore or Operator logs. The long-lived backend data is the aggregate result for the show together with the shared show information needed to display it.</p>
-          <p>To prevent duplicate submissions, the App temporarily retains a pseudonymous technical identifier scoped to one show and one phase. The raw Firebase anonymous UID is not stored as a Collective ledger in Firestore, and the system is designed not to build a cross-show history of individual users.</p>
-          <p>Your name, note, photos, and Personal MEMORY text are not sent for Shared Afterglow aggregation. Other users are not shown individual submissions or identities; they see only an aggregated distribution.</p>
-          <p>However, for shows with very few participating users, it may not be possible to completely eliminate the possibility that someone could infer another user’s general afterglow tendency by combining the aggregate with information from outside Yoin.</p>
+          <p>Your afterglow position is used to combine results from the same show. After it is converted into the form needed for aggregation, Yoin does not keep it as an exact individual position. Your name, note, photos, and Personal MEMORY text are not sent.</p>
+          <p>Yoin temporarily keeps the identifier needed to prevent the same information from being counted twice for the same show. It is not used to build a history of your activity across different shows.</p>
+          <p>Other users do not see individual submissions or identities; they see only the aggregated Shared Afterglow. However, when very few people participate in a show, it may still be possible to infer another user’s general afterglow tendency from information outside Yoin.</p>
         </section>
 
         <section class="legal-section" aria-labelledby="export-sharing">
@@ -110,16 +109,16 @@
         <section class="legal-section" aria-labelledby="retention-deletion">
           <h2 id="retention-deletion">6. Data Retention and Deletion</h2>
           <p>Live show records stored on the device can be deleted by the user from the App. Users can also delete all Yoin data stored on the device through the Data Management feature.</p>
-          <p>Exact afterglow coordinates submitted for Shared Afterglow are not persistently stored on the server. Pseudonymous technical identifiers used for duplicate prevention and related processing are retained only for the limited period needed to close and finalize the relevant show phase, after which they are scheduled for automatic deletion. Because platform cleanup is asynchronous, physical deletion may take additional time.</p>
-          <p>Information accepted for Shared Afterglow is incorporated into an aggregate for the show. Deleting a Personal MEMORY or deleting local app data does not individually remove or withdraw information that has already been incorporated into that aggregate. The App currently does not provide an individual deletion or withdrawal function for accepted Shared Afterglow submissions. Shared show information and aggregate results may be retained to provide Shared Afterglow and future reflection experiences.</p>
+          <p>Yoin does not keep an exact individual afterglow position on the server after it has been processed for Shared Afterglow. Identifiers needed for authentication and duplicate-submission prevention are kept only as long as needed and are then deleted.</p>
+          <p>Information sent to Shared Afterglow is reflected in the aggregate for that show. Deleting a Personal MEMORY or local app data does not individually remove or withdraw information that has already been included in that aggregate. Yoin currently does not provide an individual deletion or withdrawal function for accepted Shared Afterglow submissions. Show information and aggregate results are retained to provide Shared Afterglow.</p>
           <p>If the user stops sending usage data to Firebase Analytics, collection stops from that point onward.</p>
           <p>For usage data already sent to Firebase Analytics, deleting data in the App does not guarantee deletion from Google’s servers. Data in Firebase Analytics is handled in accordance with the retention period set by the Operator and Google’s policies.</p>
         </section>
 
         <section class="legal-section" aria-labelledby="external-services">
           <h2 id="external-services">7. External Services and Security Measures</h2>
-          <p>The App uses Firebase / Google Cloud services provided by Google LLC. Firebase Analytics is used for usage analytics, while Firebase Authentication, Cloud Functions, and Cloud Firestore are used to authenticate, process, and store information for Shared Afterglow. The App may also use security features such as Firebase App Check to help reduce unauthorized access.</p>
-          <p>Communications with these services use encrypted transport provided by Firebase / Google Cloud. Information processed by these services is handled in accordance with Google’s terms and privacy policy and the Operator’s service configuration.</p>
+          <p>The App uses Firebase / Google Cloud services provided by Google LLC. Firebase Analytics is used for usage analytics, while Firebase Authentication, Cloud Functions, and Cloud Firestore are used to authenticate, aggregate, and store information for Shared Afterglow.</p>
+          <p>Communications with these services use encrypted connections. Information processed by these services is handled in accordance with Google’s terms and privacy policy and the Operator’s service configuration.</p>
           <p>Except where required by law, the Operator does not sell information obtained through the App.</p>
         </section>
 
