@@ -52,9 +52,9 @@
         <section class="legal-section" aria-labelledby="basic-policy">
           <h2 id="basic-policy">1. 基本方針</h2>
           <p>Yoinは、ライブのあとに感じたことや思い出を、自分のために残して振り返るためのアプリです。</p>
-          <p>アーティスト名、公演情報、一言、感覚の記録、写真など、ユーザーがYoinに保存するライブの記録は、原則としてユーザーの端末内に保存されます。</p>
-          <p>これらのライブの記録を、運営者のサーバーへ保存する機能はありません。</p>
-          <p>Yoinには、ユーザーアカウントの作成やログイン機能もありません。</p>
+          <p>アーティスト名、公演情報、一言、感覚の記録、写真など、ユーザーがYoinに保存する個人のライブ記録は、原則としてユーザーの端末内に保存されます。</p>
+          <p>「みんなの余韻」を利用するためにユーザーが公演候補を明示的に選択した場合に限り、同じ公演の余韻を集計するための最小限の情報を、運営者が利用するFirebase / Google Cloud基盤へ送信します。送信する情報と取り扱いは第4項に記載します。</p>
+          <p>Yoinには、ユーザーが作成するアカウントやログイン機能はありません。ただし、「みんなの余韻」の認証と重複送信防止のため、Firebase Anonymous Authenticationによる匿名認証を利用します。</p>
         </section>
 
         <section class="legal-section" aria-labelledby="local-data">
@@ -67,7 +67,7 @@
             <li>今後行く予定のライブや通知に必要な情報</li>
             <li>アプリの設定や入力途中の情報</li>
           </ul>
-          <p>これらは、本アプリの通常利用において運営者へ送信されません。</p>
+          <p>第3項の利用状況の収集および第4項の「みんなの余韻」に記載する場合を除き、これらの端末内データは運営者へ送信されません。</p>
         </section>
 
         <section class="legal-section" aria-labelledby="analytics">
@@ -82,38 +82,55 @@
             <li>アプリのインストールを識別するための識別子</li>
           </ul>
           <p>これらは、Yoinの利用状況を把握し、機能や使いやすさを改善する目的で利用します。広告配信を目的として利用しません。</p>
-          <p>Yoinが送信する利用状況には、アーティスト名、公演名、会場名、一言、感覚の記録、写真などのライブ記録の内容を含めない設計としています。また、Android広告IDや独自のユーザーIDを利用していません。</p>
+          <p>YoinがFirebase Analyticsへ送信する利用状況には、アーティスト名、公演名、会場名、一言、感覚の記録、写真などのライブ記録の内容を含めない設計としています。また、Android広告IDを広告配信のために利用しません。</p>
           <p>ユーザーは、設定画面から利用状況の送信をいつでも停止できます。</p>
         </section>
 
+        <section class="legal-section" aria-labelledby="collective-afterglow">
+          <h2 id="collective-afterglow">4. 「みんなの余韻」で取り扱う情報</h2>
+          <p>ユーザーが公演候補を明示的に選択した場合、その公演に対する「ライブ直後」または「翌日」の余韻を、同じ公演を選んだユーザーの余韻と集合的に表示するため、次の情報を送信します。</p>
+          <ul>
+            <li>選択した共通公演への参照</li>
+            <li>ライブ直後または翌日の区分</li>
+            <li>余韻の位置情報（アプリ内の感覚空間上の位置）</li>
+            <li>認証および同一公演・同一区分への重複送信防止に必要なFirebase匿名認証情報</li>
+          </ul>
+          <p>送信された余韻の正確な座標は、サーバー側で32×32の集計区画へ変換するために一時的に処理し、Cloud Firestoreや運営ログには保存しません。長期的に保持するのは、公演ごとの集計結果と、その集計を表示するための共通公演情報です。</p>
+          <p>重複送信を防ぐため、同一公演・同一区分の範囲だけで使う仮名化された技術的な識別情報を短期間保持します。Firebaseの生の匿名UIDをCollectiveのFirestore台帳として保存せず、異なる公演をまたいだユーザー履歴を作成しない設計としています。</p>
+          <p>名前、一言、写真、個人のMEMORY本文は「みんなの余韻」の集計には送信しません。また、他のユーザーには個別の投稿や個人を表示せず、集計された分布として表示します。</p>
+          <p>ただし、利用者が少ない公演では、外部の情報と組み合わせることで他の利用者の余韻の傾向を推測できる可能性を完全には排除できません。</p>
+        </section>
+
         <section class="legal-section" aria-labelledby="export-sharing">
-          <h2 id="export-sharing">4. データの書き出し・共有</h2>
+          <h2 id="export-sharing">5. データの書き出し・共有</h2>
           <p>ユーザーは、本アプリに保存したデータを書き出したり、共有機能を使って外部へ送ったりすることができます。</p>
           <p>これらはユーザー自身の操作によって行われます。ユーザーが選択した保存先や共有先へ渡った情報については、そのサービスのプライバシーポリシー等が適用されます。</p>
         </section>
 
         <section class="legal-section" aria-labelledby="retention-deletion">
-          <h2 id="retention-deletion">5. データの保持と削除</h2>
+          <h2 id="retention-deletion">6. データの保持と削除</h2>
           <p>端末内に保存されたライブの記録は、ユーザーが本アプリから削除できます。また、データ管理機能からYoinの端末内データをまとめて削除できます。</p>
+          <p>「みんなの余韻」で送信された正確な余韻座標はサーバーへ永続保存しません。重複送信防止などに用いる仮名化された技術的な識別情報は、公演ごとの受付終了と集計確定に必要な短期間のみ保持し、その後は自動削除の対象とします。基盤側の非同期削除により、実際の物理削除まで時間がかかる場合があります。</p>
+          <p>「みんなの余韻」で受理された情報は公演単位の集計結果へ反映されます。端末内のPersonal MEMORYや端末データを削除しても、すでに集計へ反映された情報を個別に削除または撤回する機能は現在提供していません。共通公演情報と集計結果は、「みんなの余韻」の提供および将来の振り返り体験のために保持する場合があります。</p>
           <p>Firebase Analyticsへの利用状況の送信を停止した場合、それ以降の収集を停止します。</p>
           <p>すでにFirebase Analyticsへ送信された利用状況については、本アプリ内のデータ削除によってGoogleのサーバー上から削除されることを保証するものではありません。Firebase Analytics上のデータは、運営者が設定する保持期間およびGoogleのポリシーに従って取り扱われます。</p>
         </section>
 
         <section class="legal-section" aria-labelledby="external-services">
-          <h2 id="external-services">6. 外部サービスと安全管理</h2>
-          <p>本アプリは、利用状況の分析にGoogle LLCが提供するFirebase Analyticsを利用します。</p>
-          <p>Firebase Analyticsへ情報を送信する場合は、Firebaseが提供する暗号化された通信経路を利用します。</p>
+          <h2 id="external-services">7. 外部サービスと安全管理</h2>
+          <p>本アプリは、Google LLCが提供するFirebase / Google Cloudのサービスを利用します。利用状況の分析にはFirebase Analyticsを、「みんなの余韻」の認証・処理・保存にはFirebase Authentication、Cloud Functions、Cloud Firestoreを利用します。また、不正なアクセスを抑えるためFirebase App Check等のセキュリティ機能を利用する場合があります。</p>
+          <p>これらのサービスとの通信には、Firebase / Google Cloudが提供する暗号化された通信経路を利用します。各サービスで処理される情報は、Googleの利用規約・プライバシーポリシーおよび運営者の設定に従って取り扱われます。</p>
           <p>運営者は、法令に基づく場合を除き、本アプリを通じて取得した情報を販売しません。</p>
         </section>
 
         <section class="legal-section" aria-labelledby="policy-changes">
-          <h2 id="policy-changes">7. 本ポリシーの変更</h2>
+          <h2 id="policy-changes">8. 本ポリシーの変更</h2>
           <p>本アプリの機能、利用する外部サービス、法令やプラットフォームのルール等の変更に応じて、本プライバシーポリシーを変更することがあります。</p>
           <p>変更後の内容は、本ページに掲載した時点から適用します。</p>
         </section>
 
         <section class="legal-section" aria-labelledby="contact-details">
-          <h2 id="contact-details">8. お問い合わせ</h2>
+          <h2 id="contact-details">9. お問い合わせ</h2>
           <p>本アプリおよび本プライバシーポリシーに関するお問い合わせは、以下までご連絡ください。</p>
           <address class="legal-contact">
             <span>運営者：burioworks</span>
